@@ -1,34 +1,52 @@
-# LinkedList Lab
+## LinkedList Implementation
+This is a C++ implementation of a singly linked list data structure. The code provides a LinkedList class that supports various operations for manipulating and interacting with the linked list.
 
-## Purpose
-To build a single-linked list with the use of templates while handling memory management.
+## Features
+* Insertion of nodes at the head (insertHead) or tail (insertTail) of the list
+* Insertion of a node after a specific node (insertAfter)
+* Removal of a node with a given value (remove)
+* Clearing the list of all nodes (clear)
+* Accessing the value of a node at a specific index (at)
+* Retrieving the number of nodes in the list (size)
+* Converting the list to a string representation (toString)
 
-## Background
-Develop a Linked List that performs several standard operations. Linked Lists are common data structures in all object-oriented languages, and will play a vital role in your activities as a programmer.
+## Usage
+To use the LinkedList class, follow these steps:
 
-## Requirements
-* This lab must be completed on the Linux OS.
-* You will use the files in this git repository to complete the lab.
-* A short video has been created for this lab which you may find very helpful.  You can watch it 
-[here](https://youtu.be/zRdZaBSqjEM).
-* You are required to use template classes that accept various types including ints, doubles, strings, etc.
-* The linked list must be a single-linked list with an external pointer only to the first node in the list. You should have a head pointer, but not a tail pointer.
+1. Include the LinkedList.h header file in your C++ program.
+2. Create an instance of the LinkedList class, specifying the desired type for the elements in the list (e.g., LinkedList<int> for integer values or LinkedList<string> for string values).
+3. Use the available methods to manipulate and interact with the linked list.
 
-### Part 1 - Insertion Tests (40 points)
-* Construct a Single-Linked List that can be used with template classes and that passes all of the Test Driver's insertion tests consisting of file1.txt and file2.txt (20 points each).
-* These will test your insertHead, insertTail, and insertAfter functions.
+Example:
 
-### Part 2 - Remove (24 points)
-* This will test your remove and clear functions.  Includes files file3.txt and file4.txt (12 points each).
+#include "LinkedList.h"
 
-### Part 3 - Comprehensive Tests (24 points)
-* Pass file5.txt of the Test Driver. This more comprehensively tests all the linked list's functions using strings.
+int main() {
+    // Create an instance of LinkedList with integers
+    LinkedList<int> myList;
 
-### Part 4 - No Leaks in the Hull (12 points Pass/Fail)
-* Run and pass Valgrind on your program to ensure that you have no memory leaks.
+    // Insert nodes
+    myList.insertHead(5);
+    myList.insertTail(10);
+    myList.insertAfter(7, 5);
 
-### Requirement Notes
-* You may not use the predefined C++ Standard Template Library (STL) classes.
-* This lab must run on the Linux machines. The pass-off scripts will work only on those machines
-* For this lab only, due to the nature of template classes, you are strongly encouraged to implement the entire class in only a '.h'.  All classes that are not templates must be implemented by a '.h' and a '.cpp'
-* Make sure that you pass all 5 tests before attempting to fix any memory leaks.  If anything causes the program to crash (or if the pass-off script is unable to finish testing your code) the pass-off script may terminate before it is able to delete your LinkedList, which will always result in memory leaks.
+    // Print the list
+    std::cout << "List: " << myList.toString() << std::endl;
+
+    // Remove a node
+    myList.remove(10);
+
+    // Access a node at a specific index
+    int value = myList.at(1);
+    std::cout << "Value at index 1: " << value << std::endl;
+
+    // Get the size of the list
+    int size = myList.size();
+    std::cout << "List size: " << size << std::endl;
+
+    // Clear the list
+    myList.clear();
+
+    return 0;
+}
+
