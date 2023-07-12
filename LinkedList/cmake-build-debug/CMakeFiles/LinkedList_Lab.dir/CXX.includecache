@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bradenwellman/Desktop/LinkedList-Lab/LinkedList.h
+string
+-
+sstream
+-
+LinkedListInterface.h
+/Users/bradenwellman/Desktop/LinkedList-Lab/LinkedListInterface.h
+typeinfo
+-
+
+/Users/bradenwellman/Desktop/LinkedList-Lab/LinkedListInterface.h
+string
+-
+
+/Users/bradenwellman/Desktop/LinkedList-Lab/main.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+stdexcept
+-
+LinkedList.h
+/Users/bradenwellman/Desktop/LinkedList-Lab/LinkedList.h
+string
+-
+typeinfo
+-
+
